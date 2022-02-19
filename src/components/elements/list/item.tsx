@@ -4,12 +4,13 @@ import { useState } from "react";
 import {
   Box,
   BoxProps,
-  Grid,
-  GridItem,
+  Flex,
   Heading,
   ListItem,
   ListItemProps,
   Text,
+  useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 import { TerroristType } from "../../../types";
@@ -25,6 +26,9 @@ export const Item: Component<ItemProps> = (props) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
+  const { colorMode } = useColorMode();
+  const backgroundColor = useColorModeValue("#EEE", "#444");
+
   const MotionBox = motion<BoxProps>(Box);
   const MotionLi = motion<ListItemProps>(ListItem);
 
@@ -32,14 +36,13 @@ export const Item: Component<ItemProps> = (props) => {
     <MotionLi
       style={{
         listStyle: "none",
-        backgroundColor: "rgba(214,214,214,0.5)",
+        backgroundColor: `${backgroundColor}`,
         borderRadius: "10px",
         padding: "20px",
-        marginBottom: "20px",
         overflow: "hidden",
         cursor: "pointer",
         borderWidth: "3px",
-        borderColor: `${getRoleColor(terrorist.group)}`,
+        borderColor: `${getRoleColor(colorMode === "light", terrorist.group)}`,
       }}
       layout
       onClick={() => {
@@ -47,25 +50,31 @@ export const Item: Component<ItemProps> = (props) => {
       }}
       initial={{ borderRadius: 10 }}
     >
-      <Grid templateColumns={"repeat(1, 5fr)"}>
-        <GridItem colSpan={1}>
-          <MotionBox
-            width={"80px"}
-            height={"80px"}
-            borderRadius={"20px"}
-            layout
+      <Flex>
+        <MotionBox
+          maxWidth={"80px"}
+          height={"80px"}
+          borderRadius={"20px"}
+          layout
+        >
+          <img width={"80px"} src={`images/${terrorist.image}`} alt="" />
+        </MotionBox>
+        <Box marginLeft={8}>
+          <Text
+            fontSize={"14px"}
+            textColor={getRoleColor(colorMode === "light", terrorist.group)}
+            textTransform={"uppercase"}
           >
-            <img src={`images/${terrorist.image}`} alt="" />
-          </MotionBox>
-        </GridItem>
-        <GridItem colStart={2} colEnd={6}>
-          <Text fontSize={"12px"} textTransform={"uppercase"}>
             {terrorist.group}
           </Text>
-          <Heading fontSize={"36px"}>{terrorist.name}</Heading>
-        </GridItem>
-      </Grid>
-
+          <Heading
+            fontSize={"36px"}
+            textColor={getRoleColor(colorMode === "light", terrorist.group)}
+          >
+            {terrorist.name}
+          </Heading>
+        </Box>
+      </Flex>
       <AnimatePresence>
         {isOpen && (
           <MotionBox

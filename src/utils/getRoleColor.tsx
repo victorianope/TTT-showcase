@@ -1,16 +1,18 @@
-export const getRoleColor = (role: string) => {
+export const getRoleColor = (lightMode: boolean, role: string) => {
   switch (role) {
     case "detective":
-      return "#5D6D7E";
+      return lightMode ? "#2871CC" : "#5099F4";
     case "traitor":
-      return "#8D021F";
-    case "neutral_assassin":
-      return "#581845";
+      return lightMode ? "#DA012D" : "#DA012D";
+    case "neutral_killer":
+      return lightMode ? "#581845" : "#A44CD3";
     case "neutral":
-      return "#F0B27A";
+      return lightMode ? "#f89f5b" : "#F0B27A";
     case "innocent":
-      return "#8CDBA9";
+      return lightMode ? "#8CDBA9" : "#8CDBA9";
+    case "other":
+      return lightMode ? "#00B4D8" : "#00B4D8";
     default:
-      return "white";
+      return lightMode ? "white" : "white";
   }
 };

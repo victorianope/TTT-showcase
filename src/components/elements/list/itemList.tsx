@@ -1,37 +1,48 @@
 import { motion } from "framer-motion";
 
-import { UnorderedList } from "@chakra-ui/react";
+import {
+  Center,
+  ListProps,
+  UnorderedList,
+  useBreakpointValue,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
-import { terroristList } from "../../../assets/database";
 import { Component, ComponentProps } from "../../base/fc";
 import { Item } from "./item";
+import { TerroristType } from "../../../types/";
 
-interface ListProps extends ComponentProps {
-  selectedId?: string;
+interface ItemListProps extends ComponentProps {
+  terroristFilteredList: TerroristType[];
 }
 
-export const ItemList: Component<ListProps> = (props) => {
-  const { selectedId } = props;
+export const ItemList: Component<ItemListProps> = (props) => {
+  const { terroristFilteredList } = props;
+
+  const backgroundColor = useColorModeValue("white", "#222");
+  const width = useBreakpointValue({ base: "95%", lg: "70%", xl: "60%" });
 
   const MotionList = motion<ListProps>(UnorderedList);
 
   return (
-    <MotionList
-      style={{
-        width: "300px",
-        display: "flex",
-        flexDirection: "column",
-        background: "white",
-        padding: "20px",
-        borderRadius: "25px",
-        listStyle: "none",
-      }}
-      layout
-      initial={{ borderRadius: 25 }}
-    >
-      {terroristList.map((terroristItem, terroristId) => (
-        <Item key={terroristId} terrorist={terroristItem} />
-      ))}
-    </MotionList>
+    <Center>
+      <MotionList
+        marginTop={"25px"}
+        width={width}
+        display={"flex"}
+        flexDirection={"column"}
+        background={backgroundColor}
+        padding={"20px"}
+        borderRadius={"25px"}
+        listStyleType={"none"}
+        spacing={"20px"}
+        layout
+        initial={{ borderRadius: 25 }}
+      >
+        {terroristFilteredList.map((terroristItem, terroristId) => (
+          <Item key={terroristId} terrorist={terroristItem} />
+        ))}
+      </MotionList>
+    </Center>
   );
 };

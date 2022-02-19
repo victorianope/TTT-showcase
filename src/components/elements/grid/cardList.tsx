@@ -1,16 +1,15 @@
-import { terroristList } from "../../../assets/database";
-
-import { Box, UnorderedList } from "@chakra-ui/react";
+import { UnorderedList } from "@chakra-ui/react";
 
 import { Component, ComponentProps } from "../../base/fc";
 import { Card } from "./card";
+import { TerroristType } from "../../../types/";
 
 interface ListProps extends ComponentProps {
-  selectedId?: string;
+  terroristFilteredList: TerroristType[];
 }
 
 export const CardList: Component<ListProps> = (props) => {
-  const { selectedId } = props;
+  const { terroristFilteredList } = props;
   return (
     <UnorderedList
       listStyleType={"none"}
@@ -21,7 +20,7 @@ export const CardList: Component<ListProps> = (props) => {
       justifyContent={"space-evenly"}
       alignContent={"center"}
     >
-      {terroristList.map((terroristItem, terroristId) => (
+      {terroristFilteredList.map((terroristItem, terroristId) => (
         <Card key={terroristId} terrorist={terroristItem} />
       ))}
     </UnorderedList>

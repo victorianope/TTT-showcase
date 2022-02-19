@@ -1,7 +1,15 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import { Box, BoxProps, Heading, ListItem, Text } from "@chakra-ui/react";
+import {
+  Box,
+  BoxProps,
+  Heading,
+  ListItem,
+  Text,
+  useColorMode,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 import { TerroristType } from "../../../types";
 import { Component, ComponentProps } from "../../base/fc";
@@ -14,6 +22,9 @@ interface CardProps extends ComponentProps {
 export const Card: Component<CardProps> = (props) => {
   const { terrorist } = props;
   const MotionBox = motion<BoxProps>(Box);
+  const { colorMode } = useColorMode();
+
+  const bgColor = useColorModeValue("#EEE", "#1c1c1e");
 
   return (
     <ListItem
@@ -29,16 +40,16 @@ export const Card: Component<CardProps> = (props) => {
         height={"100%"}
         position={"relative"}
         display={"block"}
-        borderRadius={"15px"}
-        borderWidth={"2px"}
-        borderColor={getRoleColor(terrorist.group)}
+        borderRadius={"30px"}
+        borderWidth={"8px"}
+        borderColor={getRoleColor(colorMode === "light", terrorist.group)}
       >
         <Link to={terrorist.id}>
           <MotionBox
             cursor={"pointer"}
             position={"relative"}
             borderRadius={"20px"}
-            background={"#1c1c1e"}
+            background={bgColor}
             overflow={"hidden"}
             width={"100%"}
             height={"100%"}
@@ -60,13 +71,16 @@ export const Card: Component<CardProps> = (props) => {
               maxWidth={"600px"}
             >
               <Text
-                textColor={"#fff"}
+                textColor={getRoleColor(colorMode === "light", terrorist.group)}
                 fontSize={"14px"}
                 textTransform={"uppercase"}
               >
                 {terrorist.group}
               </Text>
-              <Heading color={"#fff"} margin={"8px 0"}>
+              <Heading
+                color={getRoleColor(colorMode === "light", terrorist.group)}
+                margin={"8px 0"}
+              >
                 {terrorist.name}
               </Heading>
             </MotionBox>

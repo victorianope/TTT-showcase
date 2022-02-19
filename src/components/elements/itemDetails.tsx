@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { Link, Navigate } from "react-router-dom";
 
 import { Box, BoxProps, Heading, Image, Text } from "@chakra-ui/react";
