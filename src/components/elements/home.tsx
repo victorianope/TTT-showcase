@@ -1,6 +1,6 @@
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 import {
   Box,
@@ -22,9 +22,10 @@ import { TerroristType } from "../../types/";
 
 export const Home: Component = () => {
   const { id } = useParams();
+  const location = useLocation();
 
   const [showAsList, setShowAsList] = useState(true);
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(location.search.split("?")[1] || "");
   const [terroristFilteredList, setTerroristFilteredList] =
     useState<Array<TerroristType>>(terroristList);
 
@@ -44,8 +45,6 @@ export const Home: Component = () => {
         const groupCheck = item.group
           .toLocaleLowerCase()
           .includes(query.toLocaleLowerCase());
-
-        console.log(descriptionCheck, nameCheck, groupCheck, item);
 
         return descriptionCheck || nameCheck || groupCheck;
       })
@@ -90,17 +89,20 @@ export const Home: Component = () => {
               </ButtonGroup>
             </Flex>
 
-            <Flex justifyContent={"center"} marginTop={6}>
+            <Center>
               <Input
+                maxWidth={{ base: "80%", md: "70%", lg: "50%", xl: "40%" }}
                 borderColor={searchBarColor}
+                marginTop={6}
                 type="text"
                 value={query}
+                placeholder={"¿Qué podrá hacer mi personaje?"}
                 onChange={(e) => {
                   setQuery(e.target.value);
                 }}
                 autoFocus
               />
-            </Flex>
+            </Center>
 
             {showAsList ? (
               <>
