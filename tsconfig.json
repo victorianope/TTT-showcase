@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "baseUrl": "./",
+    "paths": {
+      "~/assets/*": ["src/assets/*"],
+      "~/components/*": ["src/components/*"],
+      "~/hooks/*": ["src/hooks/*"],
+      "~/middlewares/*": ["src/middlewares/*"],
+      "~/pages/*": ["src/pages/*"],
+      "~/routes/*": ["src/routes/*"],
+      "~/services/*": ["src/services/*"],
+      "~/styles/*": ["src/styles/*"],
+      "~/tests/*": ["src/tests/*"],
+      "~/types/*": ["src/types/*"],
+      "~/utils/*": ["src/utils/*"]
+    }
+  },
+  "include": ["src"]
+}
