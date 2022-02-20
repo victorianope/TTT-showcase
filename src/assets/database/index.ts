@@ -532,119 +532,181 @@ const bodyguard: TerroristType = {
   id: "bodyguard",
   name: "Bodyguard",
   group: "neutral",
-  description: ["", ""],
+  description: [
+    "Debes proteger al jugador que se te asigne.",
+    "Sabrás el rol de esa persona (se puede mirar en el tabulador), pero no el de sus compañeros.",
+    "Si muere, recibirás daño y una nueva persona a la que proteger.",
+    "Dañar a tu protegido hará que el pierda vida, pero tú perderás el doble.",
+    "Matar a tu protegido implicará tu muerte.",
+  ],
   image: "../static/bodyguard.png",
 };
 const pirateCaptain: TerroristType = {
   id: "piratecaptain",
   name: "Pirate Captain",
   group: "neutral",
-  description: [],
+  description: [
+    "Tiene un contrato sin habilidades especiales que le une a la persona que lo recoja del suelo (debe ser tirado por el capitán).",
+    "El capitán ayudará al maestro que recogió el contrato (equipo dinámico).",
+    "Si el maestro muere el contrato deberá ser recogido por otro jugador.",
+    "Si el capitán muere, se rompe el contrato y se escoge a otro capitán que deberá elegir otro maestro (debe haber al menos 2 piratas en la partida).",
+  ],
   image: "../static/piratecaptain.png",
 };
 const amnesiac: TerroristType = {
   id: "amnesiac",
   name: "Amnesiac",
   group: "neutral",
-  description: [],
+  description: [
+    "Obtendrá el rol y equipo del primer cadaver que revise (se avisará al resto de jugadores de qué el amnesiac ha cambiado de rol y equipo).",
+  ],
   image: "../static/amnesiac.png",
 };
 const drunk: TerroristType = {
   id: "drunk",
   name: "Drunk",
   group: "neutral",
-  description: [],
+  description: [
+    "Cada vez que alguien muere, hay una probabilidad en que el borracho se convierta en ese rol (no se necesita descubrir el cadáver).",
+    "Cambia tanto de rol como de bando.",
+  ],
   image: "../static/drunk.png",
 };
 const jester: TerroristType = {
   id: "jester",
   name: "Jester",
   group: "neutral",
-  description: [],
+  description: [
+    "Su objetivo es ser asesinado por alguien (hay roles que pueden matar al jester y que este no gane la partida).",
+    "No hace daño.",
+  ],
   image: "../static/jester.png",
 };
 const clown: TerroristType = {
   id: "clown",
   name: "Clown",
   group: "neutral",
-  description: [],
+  description: [
+    "Es un jester, por lo tanto no hace daño.",
+    "Puede morir durante la ronda (no acabará la partida con la victoria del clown).",
+    "Si debería acabar la partida y sigue vivo se convertirá en payaso asesino y tendrá que matar al bando restante.",
+  ],
   image: "../static/clown.png",
 };
 const undecided: TerroristType = {
   id: "undecided",
   name: "Undecided",
   group: "neutral",
-  description: [],
+  description: [
+    "Aparecerás con 3 roles de los que deberás escoger 1 en menos de un minuto.",
+    "No escogerlo implicará convertirte en jester o morir.",
+  ],
   image: "../static/undecided.png",
 };
 const thief: TerroristType = {
   id: "thief",
   name: "Thief",
   group: "neutral",
-  description: [],
+  description: [
+    "Robará la victoria si al acabar la partida el ladrón sigue vivo.",
+    "Traidores, inocentes, neutrales y asesinos se pondrán de acuerdo para matarte nada más empezar la partida.",
+    "Empiezas la partida con tienda y créditos, úsalos correctamente para ganar al resto.",
+  ],
   image: "../static/thief.png",
 };
 const unknown: TerroristType = {
   id: "unknown",
   name: "Unknown",
   group: "neutral",
-  description: [],
+  description: [
+    "Pierde si acaba la partida y está vivo.",
+    "Si es asesinado y no acaba la partida, renacerá automáticamente con el mismo rol de su asesino.",
+  ],
   image: "../static/unknown.png",
 };
 const medic: TerroristType = {
   id: "medic",
   name: "Medic",
   group: "neutral",
-  description: [],
+  description: [
+    "No tiene tienda.",
+    "No puede ganar.",
+    "Todo el mundo sabe que eres médico.",
+    "Puedes morir.",
+    "Deberás aliarte con un bando y utilizar tus armas sanadoras para que ganen (puedes cambiar de bando en cualquier momento).",
+    "Su muerte y la forma de la misma será notificado a todos los jugadores.",
+  ],
   image: "../static/medic.png",
 };
 const mimic: TerroristType = {
   id: "mimic",
   name: "Mimic",
   group: "neutral",
-  description: [],
+  description: [
+    "Usando la 'e' sobre otro jugador, copiará su rol y su bando.",
+    "¡Cuidado, cuando copies un rol es avisado automáticamente a su víctima! (hazlo cuando haya más gente cerca).",
+  ],
   image: "../static/mimic.png",
 };
 const marker: TerroristType = {
   id: "marker",
   name: "Marker",
   group: "neutral",
-  description: [],
+  description: [
+    "Su objetivo es pintar a todos los jugadores de la partida con su arma especial.",
+    "Cuando alguien es pintado, es notificado.",
+    "No hace daño.",
+    "Ganará marcando (pintando) a todos los jugadores.",
+  ],
   image: "../static/marker.png",
 };
 const cupid: TerroristType = {
   id: "cupid",
   name: "Cupid",
   group: "neutral",
-  description: [],
+  description: [
+    "Deberá enamorar a dos personas entre sí con su ballesta (si no lo hace en un máximo de tiempo, perderá su ballesta).",
+    "El mismo puede convertirse en enamorado usando el click derecho del ratón.",
+  ],
   image: "../static/cupid.png",
 };
 const liar: TerroristType = {
   id: "liar",
   name: "Liar",
   group: "neutral",
-  description: [],
+  description: [
+    "Su rol no es conocido (ni el propio liar).",
+    "Si muere, su cuerpo se convierte en un cuerpo de traidor con 1 crédito.",
+  ],
   image: "../static/liar.png",
 };
 const swapper: TerroristType = {
   id: "swapper",
   name: "Swapper",
   group: "neutral",
-  description: [],
+  description: [
+    "Es un jester (no puede hacer daño y aparece como un jester para los traidores).",
+    "Su objetivo es que lo maten, entonces cambiará de rol con su asesino y este recibirá el rol de swapper con 1 de vida.",
+  ],
   image: "../static/swapper.png",
 };
 const ghost: TerroristType = {
   id: "ghost",
   name: "Ghost",
   group: "neutral",
-  description: [],
+  description: [
+    "Atormentarás a tu asesino apareciendo en forma física al lado suya cada 5 s.",
+  ],
   image: "../static/ghost.png",
 };
 const leech: TerroristType = {
   id: "leech",
   name: "Leech",
   group: "neutral",
-  description: [],
+  description: [
+    "Es una sanguijuela.",
+    "Deberá permanecer al lado de otra persona o perderá vida progresivamente.",
+  ],
   image: "../static/leech.png",
 };
 
@@ -653,63 +715,88 @@ const graverobber: TerroristType = {
   id: "graverobber",
   name: "Graverobber",
   group: "other",
-  description: [],
+  description: [
+    "Seguirás siendo traidor, pero deberás buscar el ankh para robarlo.",
+    "Tener el ankh de tu bando, te ayudará con regeneración de vida pasiva cuando estés cerca suya y tú reanimación cuando mueres.",
+    "Tú objetivo encontrar el ankh y matar al pharaoh.",
+  ],
   image: "../static/graverobber.png",
 };
 const ravenous: TerroristType = {
   id: "ravenous",
   name: "Ravenous",
   group: "other",
-  description: [],
+  description: [
+    "Se convierte en un asesino (deberá matar a todos los jugadores).",
+    "Pierde todas sus armas y se queda solo con el Devour.",
+    "Dejarás un rastro de sangre roja por donde pases.",
+  ],
   image: "../static/ravenous.png",
 };
 const deputy: TerroristType = {
   id: "deputy",
   name: "Deputy",
   group: "other",
-  description: [],
+  description: [
+    "Es el ayudante del sheriff.",
+    "Si el sheriff muere, tú también.",
+  ],
   image: "../static/deputy.png",
 };
 const thrall: TerroristType = {
   id: "thrall",
   name: "Thrall",
   group: "other",
-  description: [],
+  description: ["Ahora eres un traidor reanimado a manos del mesmerist."],
   image: "../static/thrall.png",
 };
 const sidekick: TerroristType = {
   id: "sidekick",
   name: "Sidekick",
   group: "other",
-  description: [],
+  description: [
+    "El sidekick es el ayudante del jackal.",
+    "Deberá ayudarle a ganar la partida matando a todos los jugadores.",
+  ],
   image: "../static/sidekick.png",
 };
 const killerClown: TerroristType = {
   id: "killerclown",
   name: "Killer Clown",
   group: "other",
-  description: [],
+  description: ["Ahora eres un asesino, deberás matar al bando restante."],
   image: "../static/killerclown.png",
 };
 const zombie: TerroristType = {
   id: "zombie",
   name: "Zombie",
   group: "other",
-  description: [],
+  description: [
+    "Ahora eres un asesino a sueldo a manos del necromancer.",
+    "Tendrás una deagle de 7 balas, si te quedas sin balas mueres.",
+    "Si muere el necromancer, morirás.",
+  ],
   image: "../static/zombie.png",
 };
 const lover: TerroristType = {
   id: "lover",
   name: "Lover",
   group: "other",
-  description: [],
+  description: [
+    "Ahora tu y otro compañero estáis enamorados, debéis ganar la partida juntos matando al resto de jugadores.",
+    "Si un enamorado sufre daños, el otro también.",
+    "Si uno muere, el otro también.",
+  ],
   image: "../static/lover.png",
 };
 const pirate: TerroristType = {
   id: "pirate",
   name: "Pirate",
   group: "other",
-  description: [],
+  description: [
+    "Deberá ayudar al maestro que recogió el contrato del capitán pirata.",
+    "Si el capitán pirata muere, otro pirata será elegido como capitán.",
+  ],
   image: "../static/pirate.png",
 };
 
