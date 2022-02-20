@@ -68,10 +68,10 @@ const executioner: TerroristType = {
   name: "Executioner",
   group: "traitor",
   description: [
-    'Empezará con un objetivo fijado al que deberá matar. Cuando lo mate, recibirá uno nuevo.',
-    'Penalización de 1 min si mata a otra persona que no es su objetivo.',
-    'x2 de daño a su objetivo.',
-    '/2 de daño al resto de jugador.'
+    "Empezará con un objetivo fijado al que deberá matar. Cuando lo mate, recibirá uno nuevo.",
+    "Penalización de 1 min si mata a otra persona que no es su objetivo.",
+    "x2 de daño a su objetivo.",
+    "/2 de daño al resto de jugador.",
   ],
   image: "../static/executioner.png",
 };
@@ -80,9 +80,9 @@ const hitman: TerroristType = {
   name: "Hitman",
   group: "traitor",
   description: [
-    'Empezará con un objetivo fijado al que deberá matar. Cuando lo mate, recibirá un crédito y un nuevo objetivo.',
-    'Empezarás sin créditos.',
-    'Si mata a un objetivo diferente, no avisará de su rol al resto.'
+    "Empezará con un objetivo fijado al que deberá matar. Cuando lo mate, recibirá un crédito y un nuevo objetivo.",
+    "Empezarás sin créditos.",
+    "Si mata a un objetivo diferente, no avisará de su rol al resto.",
   ],
   image: "../static/hitman.png",
 };
@@ -91,10 +91,10 @@ const glutton: TerroristType = {
   name: "Glutton",
   group: "traitor",
   description: [
-    'Tiene un arma llamada Devour.',
-    'Tiene una barra de hambre (mejora sus estadísticas) que al llegar a 0 cambiará el rol a Ravenous (equipo propio, deberá matar a todo el mundo), dejando un humo rojo y perdiendo todas sus armas.',
-    'Con el Devour, su hambre aumentará haciendo daño (click izquierdo) o comiéndose cadáveres (click derecho).',
-    'Aumento de velocidad de movimiento y regen sprint al sostener el Devour.'
+    "Tiene un arma llamada Devour.",
+    "Tiene una barra de hambre (mejora sus estadísticas) que al llegar a 0 cambiará el rol a Ravenous (equipo propio, deberá matar a todo el mundo), dejando un humo rojo y perdiendo todas sus armas.",
+    "Con el Devour, su hambre aumentará haciendo daño (click izquierdo) o comiéndose cadáveres (click derecho).",
+    "Aumento de velocidad de movimiento y regen sprint al sostener el Devour.",
   ],
   image: "../static/glutton.png",
 };
@@ -103,12 +103,12 @@ const vampire: TerroristType = {
   name: "Vampire",
   group: "traitor",
   description: [
-    'No tiene tienda.',
-    'Posibilidad de transformarse en murciélago (entra en modo sed de sangre).',
-    'Entrarán en estado de sed de sangre si no matan a alguien en 1 minuto.',
-    'Este estado hará que pierdan 1 hp cada 2s.',
-    'Se cura un 50% de daño que produzca cuando el estado de sed de sangre está activado.'
-    'Es importante asignar una tecla en el menú nuevo del TTT2 para poder usar el murciélago.',
+    "No tiene tienda.",
+    "Posibilidad de transformarse en murciélago (entra en modo sed de sangre).",
+    "Entrarán en estado de sed de sangre si no matan a alguien en 1 minuto.",
+    "Este estado hará que pierdan 1 hp cada 2s.",
+    "Se cura un 50% de daño que produzca cuando el estado de sed de sangre está activado.",
+    "Es importante asignar una tecla en el menú nuevo del TTT2 para poder usar el murciélago.",
   ],
   image: "../static/vampire.png",
 };
@@ -116,16 +116,14 @@ const blight: TerroristType = {
   id: "blight",
   name: "Blight",
   group: "traitor",
-  description: ['Envenenará a su atacante cuando muere.'],
+  description: ["Envenenará a su atacante cuando muere."],
   image: "../static/blight.png",
 };
 const mesmerist: TerroristType = {
   id: "mesmerist",
   name: "Mesmerist",
   group: "traitor",
-  description: [
-    'Tiene un desfibrilador que convierte cadáveres en traidores.'
-  ],
+  description: ["Tiene un desfibrilador que convierte cadáveres en traidores."],
   image: "../static/mesmerist.png",
 };
 const accomplice: TerroristType = {
@@ -133,12 +131,12 @@ const accomplice: TerroristType = {
   name: "Accomplice",
   group: "traitor",
   description: [
-    'Es un compañero de traidores.',
-    'Los traidores sabrán quién es el cómplice, pero el no.',
-    'No puede ganar solo.',
-    'No tiene tienda.',
-    'Tiene un radar de cuerpos.',
-    'No puedes transferir créditos a los traidores.'
+    "Es un compañero de traidores.",
+    "Los traidores sabrán quién es el cómplice, pero el no.",
+    "No puede ganar solo.",
+    "No tiene tienda.",
+    "Tiene un radar de cuerpos.",
+    "No puedes transferir créditos a los traidores.",
   ],
   image: "../static/accomplice.png",
 };
@@ -147,11 +145,11 @@ const impostor: TerroristType = {
   name: "Impostor",
   group: "traitor",
   description: [
-    'No tiene tienda.',
-    'Hace un 50 % menos de daño.',
-    'Tiene un mordisco que mata de un golpe cada 45 s.',
-    'Crea un sistema de escotillas (visibles para los jugadores que las vean abrir) que podrán usar todos los traidores.',
-    'Tiene 4 sabotajes distintos.',
+    "No tiene tienda.",
+    "Hace un 50 % menos de daño.",
+    "Tiene un mordisco que mata de un golpe cada 45 s.",
+    "Crea un sistema de escotillas (visibles para los jugadores que las vean abrir) que podrán usar todos los traidores.",
+    "Tiene 4 sabotajes distintos.",
   ],
   image: "../static/impostor.png",
 };
@@ -160,9 +158,9 @@ const haunted: TerroristType = {
   name: "Haunted",
   group: "traitor",
   description: [
-    'Si lo matan, su asesino dejará un rastro de humo.',
-    'Si matan a su asesino, revivirá.',
-    'PODRÁ HABLAR CUANDO REANIME.',
+    "Si lo matan, su asesino dejará un rastro de humo.",
+    "Si matan a su asesino, revivirá.",
+    "PODRÁ HABLAR CUANDO REANIME.",
   ],
   image: "../static/haunted.png",
 };
@@ -171,10 +169,10 @@ const imitator: TerroristType = {
   name: "Imitator",
   group: "traitor",
   description: [
-    'No tienes tienda ni botones de traidor.',
-    'Obtienes una lista de roles de inocentes que puedes imitar.',
-    'Cuando imitas sigues siendo del equipo de traidores.',
-    'Cuando mueres tú cuerpo mostrará el rol que estás imitando.',
+    "No tienes tienda ni botones de traidor.",
+    "Obtienes una lista de roles de inocentes que puedes imitar.",
+    "Cuando imitas sigues siendo del equipo de traidores.",
+    "Cuando mueres tú cuerpo mostrará el rol que estás imitando.",
   ],
   image: "../static/imitator.png",
 };
@@ -183,9 +181,9 @@ const arsonist: TerroristType = {
   name: "Arsonist",
   group: "traitor",
   description: [
-    'Es un compañero del traidor.',
-    'Tiene una Flare gun y un lanzallamas.',
-    'Resiste al fuego.',
+    "Es un compañero del traidor.",
+    "Tiene una Flare gun y un lanzallamas.",
+    "Resiste al fuego.",
   ],
   image: "../static/arsonist.png",
 };
@@ -194,7 +192,7 @@ const roider: TerroristType = {
   name: "Roider",
   group: "traitor",
   description: [
-    'Su única fuente de daño es usando su Crowbar (100 de daño por golpe).',
+    "Su única fuente de daño es usando su Crowbar (100 de daño por golpe).",
   ],
   image: "../static/roider.png",
 };
@@ -203,9 +201,9 @@ const ajin: TerroristType = {
   name: "Ajin",
   group: "traitor",
   description: [
-    'Obtendrá bonificaciones si es el último traidor en pie.',
-    'Ganará velocidad, sprint regen y daño.',
-    'Como bonus obtendrá vida extra, armadura y regeneración de vida.',
+    "Obtendrá bonificaciones si es el último traidor en pie.",
+    "Ganará velocidad, sprint regen y daño.",
+    "Como bonus obtendrá vida extra, armadura y regeneración de vida.",
   ],
   image: "../static/ajin.png",
 };
@@ -214,8 +212,8 @@ const blocker: TerroristType = {
   name: "Blocker",
   group: "traitor",
   description: [
-    'Prevent anyone to identify any body while they are still alive.',
-    'Blocker is the only one who can identify corpses! Be careful!',
+    "Prevent anyone to identify any body while they are still alive.",
+    "Blocker is the only one who can identify corpses! Be careful!",
   ],
   image: "../static/blocker.png",
 };
@@ -224,8 +222,8 @@ const defector: TerroristType = {
   name: "Defector",
   group: "traitor",
   description: [
-    'Lanzará un defector jihad. Si algún inocente la recoge, se convertirá en Defector.',
-    'El defector no puede hacer daño con las armas.',
+    "Lanzará un defector jihad. Si algún inocente la recoge, se convertirá en Defector.",
+    "El defector no puede hacer daño con las armas.",
   ],
   image: "../static/defector.png",
 };
@@ -234,8 +232,8 @@ const shanker: TerroristType = {
   name: "Shanker",
   group: "traitor",
   description: [
-    'Tiene un radar gratuito y un cuchillo para asesinar por la espalda.',
-    'El cuchillo solo hace instakill por la espalda.',
+    "Tiene un radar gratuito y un cuchillo para asesinar por la espalda.",
+    "El cuchillo solo hace instakill por la espalda.",
   ],
   image: "../static/shanker.png",
 };
@@ -280,9 +278,9 @@ const priest: TerroristType = {
   name: "Priest",
   group: "innocent",
   description: [
-    'Tiene una holy deagle para convertir inocentes/detectives en sus seguidores (menos al sniffer).',
-    'Disparar a un traidor con la deagle matará al priest.',
-    'Si el priest es cambiado de rol, todos sus seguidores también.',
+    "Tiene una holy deagle para convertir inocentes/detectives en sus seguidores (menos al sniffer).",
+    "Disparar a un traidor con la deagle matará al priest.",
+    "Si el priest es cambiado de rol, todos sus seguidores también.",
   ],
   image: "../static/priest.png",
 };
@@ -291,10 +289,10 @@ const beacon: TerroristType = {
   name: "Beacon",
   group: "innocent",
   description: [
-    'Descubrir inocentes muertos aumentará sus estadísticas.',
-    'Le aparecerá una bombilla en la cabeza cuando llegue al límite de sus características.',
-    'Si mata a otro inocente se convertirá en inocente.',
-    'Su rol, no puede ser robado por otros roles.',
+    "Descubrir inocentes muertos aumentará sus estadísticas.",
+    "Le aparecerá una bombilla en la cabeza cuando llegue al límite de sus características.",
+    "Si mata a otro inocente se convertirá en inocente.",
+    "Su rol, no puede ser robado por otros roles.",
   ],
   image: "../static/beacon.png",
 };
@@ -312,9 +310,9 @@ const spy: TerroristType = {
   name: "Spy",
   group: "innocent",
   description: [
-    'Es un imitador de traidor.',
-    'Tiene tienda de traidor para simular la compra de traidor.',
-    'Los traidores ven al espía como un traidor.',
+    "Es un imitador de traidor.",
+    "Tiene tienda de traidor para simular la compra de traidor.",
+    "Los traidores ven al espía como un traidor.",
   ],
   image: "../static/spy.png",
 };
@@ -334,12 +332,12 @@ const pharaoh: TerroristType = {
   name: "Pharaoh",
   group: "innocent",
   description: [
-    'Tiene un ankh (debe colocarlo en el suelo para convertir en un traidor en graverobber).',
-    'Si el Pharaoh muere y el ankh sigue en pie en su bando, se reanimará.',
-    'El graverobber podrá robar el ankh y usarlo del mismo modo que el Pharaoh.',
-    'El ankh cura a su dueño.',
-    'El ankh puede ser roto por cualquier jugador.',
-    'NO PODRÁ PROPORCIONAR INFORMACIÓN SOBRE OTROS ROLES CUANDO REANIME.',
+    "Tiene un ankh (debe colocarlo en el suelo para convertir en un traidor en graverobber).",
+    "Si el Pharaoh muere y el ankh sigue en pie en su bando, se reanimará.",
+    "El graverobber podrá robar el ankh y usarlo del mismo modo que el Pharaoh.",
+    "El ankh cura a su dueño.",
+    "El ankh puede ser roto por cualquier jugador.",
+    "NO PODRÁ PROPORCIONAR INFORMACIÓN SOBRE OTROS ROLES CUANDO REANIME.",
   ],
   image: "../static/pharaoh.png",
 };
@@ -348,9 +346,9 @@ const wrath: TerroristType = {
   name: "Wrath",
   group: "innocent",
   description: [
-    'No se descubre su rol hasta que muere.',
-    'Si es matado por un inocente, revivirá como un traidor.',
-    'SI PODRÁ PROPORCIONAR INFORMACIÓN CUANDO REANIME.',
+    "No se descubre su rol hasta que muere.",
+    "Si es matado por un inocente, revivirá como un traidor.",
+    "SI PODRÁ PROPORCIONAR INFORMACIÓN CUANDO REANIME.",
   ],
   image: "../static/wrath.png",
 };
@@ -359,8 +357,8 @@ const occultist: TerroristType = {
   name: "Occultist",
   group: "innocent",
   description: [
-    'Resucitará con inmunidad al fuego si no lo matas de un golpe (25 hp).',
-    'NO PODRÁ PROPORCIONAR INFORMACIÓN SOBRE OTROS ROLES CUANDO REANIME.',
+    "Resucitará con inmunidad al fuego si no lo matas de un golpe (25 hp).",
+    "NO PODRÁ PROPORCIONAR INFORMACIÓN SOBRE OTROS ROLES CUANDO REANIME.",
   ],
   image: "../static/occultist.png",
 };
@@ -369,9 +367,9 @@ const spectre: TerroristType = {
   name: "Spectre",
   group: "innocent",
   description: [
-    'Maldecirá a su asesino con un rastro de humo.',
-    'Cuando su asesino muere, el espectro reanimará.',
-    'NO PODRÁ PROPORCIONAR INFORMACIÓN SOBRE OTROS ROLES CUANDO REANIME.',
+    "Maldecirá a su asesino con un rastro de humo.",
+    "Cuando su asesino muere, el espectro reanimará.",
+    "NO PODRÁ PROPORCIONAR INFORMACIÓN SOBRE OTROS ROLES CUANDO REANIME.",
   ],
   image: "../static/spectre.png",
 };
@@ -380,10 +378,10 @@ const shinigami: TerroristType = {
   name: "Shinigami",
   group: "innocent",
   description: [
-    'No se descubre su rol hasta que muere.',
-    'Resucitará con 200 % de velocidad, un cuchillo y una lista de los traidores restantes.',
-    'Pierde vida a lo largo del tiempo (no recuperable).',
-    'NO PODRÁ HABLAR EL RESTO DE LA PARTIDA.',
+    "No se descubre su rol hasta que muere.",
+    "Resucitará con 200 % de velocidad, un cuchillo y una lista de los traidores restantes.",
+    "Pierde vida a lo largo del tiempo (no recuperable).",
+    "NO PODRÁ HABLAR EL RESTO DE LA PARTIDA.",
   ],
   image: "../static/shinigami.png",
 };
@@ -392,9 +390,9 @@ const oracle: TerroristType = {
   name: "Oracle",
   group: "innocent",
   description: [
-    'Al pulsar el tabulador, podrás ver una etiqueta amarilla sobre los roles de las personas.',
-    'Entre 30 a 60 s recibirá un bando y un conjunto de nombres de dónde salió ese bando (tanto de personas vivas como muertas).',
-    'NO PODRÁ DAR INFORMACIÓN DE OTROS JUGADORES AL RESTO.',
+    "Al pulsar el tabulador, podrás ver una etiqueta amarilla sobre los roles de las personas.",
+    "Entre 30 a 60 s recibirá un bando y un conjunto de nombres de dónde salió ese bando (tanto de personas vivas como muertas).",
+    "NO PODRÁ DAR INFORMACIÓN DE OTROS JUGADORES AL RESTO.",
   ],
   image: "../static/oracle.png",
 };
@@ -412,9 +410,9 @@ const sus: TerroristType = {
   name: "Sus",
   group: "innocent",
   description: [
-    'Has a chance to be a traitor (50 %).',
-    'Solo él sabe su rol.',
-    'Si no es alertado en un mensaje arriba a la derecha o en el tabulador con un icono de cuchillo de que es traidor NO PODRÁ USAR LA TIENDA, YA QUE SUS SIEMPRE PUEDA ACCEDER A ELLA.',
+    "Has a chance to be a traitor (50 %).",
+    "Solo él sabe su rol.",
+    "Si no es alertado en un mensaje arriba a la derecha o en el tabulador con un icono de cuchillo de que es traidor NO PODRÁ USAR LA TIENDA, YA QUE SUS SIEMPRE PUEDA ACCEDER A ELLA.",
   ],
   image: "../static/sus.png",
 };
@@ -423,8 +421,8 @@ const sleeper: TerroristType = {
   name: "Sleeper",
   group: "innocent",
   description: [
-    'Empieza siendo un inocente.',
-    'Si todos los traidores mueren, se convertirá en traidor, solo él lo sabrá.',
+    "Empieza siendo un inocente.",
+    "Si todos los traidores mueren, se convertirá en traidor, solo él lo sabrá.",
   ],
   image: "../static/sleeper.png",
 };
@@ -433,8 +431,8 @@ const guardian: TerroristType = {
   name: "Guardian",
   group: "innocent",
   description: [
-    'Puede usar su guardián deagle para dar vida temporalmente a un jugador.',
-    'Sin embargo cuando este jugador es dañado mientras tiene esa vida temporal, el guardián también recibirá daño.',
+    "Puede usar su guardián deagle para dar vida temporalmente a un jugador.",
+    "Sin embargo cuando este jugador es dañado mientras tiene esa vida temporal, el guardián también recibirá daño.",
   ],
   image: "../static/guardian.png",
 };
@@ -443,7 +441,7 @@ const revenant: TerroristType = {
   name: "Revenant",
   group: "innocent",
   description: [
-    'Es un inocente que al morir se convertirá en un asesino neutral con un 50 % más de daño.',
+    "Es un inocente que al morir se convertirá en un asesino neutral con un 50 % más de daño.",
   ],
   image: "../static/revenant.png",
 };
@@ -454,8 +452,8 @@ const serialKiller: TerroristType = {
   name: "Serial Killer",
   group: "neutral_killer",
   description: [
-    'Aparece con un cuchillo y un tracker que le permite ver a través de las paredes.',
-    'Tiene tienda propia, aunque no se le dan créditos por matar a jugadores, solamente si inspecciona el cadáver.',
+    "Aparece con un cuchillo y un tracker que le permite ver a través de las paredes.",
+    "Tiene tienda propia, aunque no se le dan créditos por matar a jugadores, solamente si inspecciona el cadáver.",
   ],
   image: "../static/serialkiller.png",
 };
@@ -464,9 +462,9 @@ const jackal: TerroristType = {
   name: "Jackal / Chacal",
   group: "neutral_killer",
   description: [
-    'Convierte a un jugador en su seguidor con el arma especial.',
-    'Ellos dos deberán ganar la partida matando al resto de jugadores.',
-    'Si el priest está en la partida y el jackal le convierte en seguidor, todos los componentes de la hermandad se convertirán en seguidores.',
+    "Convierte a un jugador en su seguidor con el arma especial.",
+    "Ellos dos deberán ganar la partida matando al resto de jugadores.",
+    "Si el priest está en la partida y el jackal le convierte en seguidor, todos los componentes de la hermandad se convertirán en seguidores.",
   ],
   image: "../static/jackal.png",
 };
@@ -475,9 +473,9 @@ const restless: TerroristType = {
   name: "Restless",
   group: "neutral_killer",
   description: [
-    'Convierte a un jugador en su seguidor con el arma especial.',
-    'Ellos dos deberán ganar la partida matando al resto de jugadores.',
-    'Si el priest está en la partida y el jackal le convierte en seguidor, todos los componentes de la hermandad se convertirán en seguidores.',
+    "Convierte a un jugador en su seguidor con el arma especial.",
+    "Ellos dos deberán ganar la partida matando al resto de jugadores.",
+    "Si el priest está en la partida y el jackal le convierte en seguidor, todos los componentes de la hermandad se convertirán en seguidores.",
   ],
   image: "../static/restless.png",
 };
@@ -487,8 +485,8 @@ const doppelganger: TerroristType = {
   group: "neutral_killer",
   description: [
     "Usando al 'e' podrá copiar el rol de otro jugador.",
-    'Sin embargo, no cambiará su bando, el seguirá siendo un asesino neutral.',
-    'La persona a la que le cambie el rol, se convertirá en amnésico.',
+    "Sin embargo, no cambiará su bando, el seguirá siendo un asesino neutral.",
+    "La persona a la que le cambie el rol, se convertirá en amnésico.",
   ],
   image: "../static/doppelganger.png",
 };
@@ -497,11 +495,11 @@ const necromancer: TerroristType = {
   name: "Necromancer",
   group: "neutral_killer",
   description: [
-    'Tiene tienda propia.',
-    'Tiene un desfibrilador con el que reanimar muertos y convertirlos en zombis.',
-    'Para ganar el resto de los jugadores vivos deberán ser zombis.',
-    'Si el necromancer muere, los zombis también.',
-    'Los zombies son lentos y tienen una deagle de 7 disparos (cuando se quedan sin munición, mueren).',
+    "Tiene tienda propia.",
+    "Tiene un desfibrilador con el que reanimar muertos y convertirlos en zombis.",
+    "Para ganar el resto de los jugadores vivos deberán ser zombis.",
+    "Si el necromancer muere, los zombis también.",
+    "Los zombies son lentos y tienen una deagle de 7 disparos (cuando se quedan sin munición, mueren).",
   ],
   image: "../static/necromancer.png",
 };
@@ -510,9 +508,9 @@ const infected: TerroristType = {
   name: "Infected",
   group: "neutral_killer",
   description: [
-    'Mata a otros jugadores para infectarlos.',
-    'Una vez son infectados renacen siendo infectados y deberán defender al jefe (si el jefe muere, todos los infectados mueren).',
-    'Los infectados podrán matar al jester.',
+    "Mata a otros jugadores para infectarlos.",
+    "Una vez son infectados renacen siendo infectados y deberán defender al jefe (si el jefe muere, todos los infectados mueren).",
+    "Los infectados podrán matar al jester.",
   ],
   image: "../static/infected.png",
 };
@@ -521,10 +519,10 @@ const duelist: TerroristType = {
   name: "Duelist",
   group: "neutral_killer",
   description: [
-    'El y otra persona son seleccionados como duelistas.',
-    'Quién gane de los dos recibirá el rol de la persona que al principio no era duelista.',
-    'Cuando acabe el duelo se curará al ganador.',
-    'No podréis hacerle daño al resto de jugadores, ellos tampoco podrán haceros daño.',
+    "El y otra persona son seleccionados como duelistas.",
+    "Quién gane de los dos recibirá el rol de la persona que al principio no era duelista.",
+    "Cuando acabe el duelo se curará al ganador.",
+    "No podréis hacerle daño al resto de jugadores, ellos tampoco podrán haceros daño.",
   ],
   image: "../static/duelist.png",
 };
@@ -534,10 +532,7 @@ const bodyguard: TerroristType = {
   id: "bodyguard",
   name: "Bodyguard",
   group: "neutral",
-  description: [
-    '',
-    '',
-  ],
+  description: ["", ""],
   image: "../static/bodyguard.png",
 };
 const pirateCaptain: TerroristType = {
