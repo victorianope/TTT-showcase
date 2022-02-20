@@ -91,7 +91,7 @@ const glutton: TerroristType = {
   name: "Glutton",
   group: "traitor",
   description: [
-    'Tiene un arma llamada Devour.'.
+    'Tiene un arma llamada Devour.',
     'Tiene una barra de hambre (mejora sus estadísticas) que al llegar a 0 cambiará el rol a Ravenous (equipo propio, deberá matar a todo el mundo), dejando un humo rojo y perdiendo todas sus armas.',
     'Con el Devour, su hambre aumentará haciendo daño (click izquierdo) o comiéndose cadáveres (click derecho).',
     'Aumento de velocidad de movimiento y regen sprint al sostener el Devour.'
