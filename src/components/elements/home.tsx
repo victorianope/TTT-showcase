@@ -1,6 +1,6 @@
-import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
-import { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { AnimatePresence, AnimateSharedLayout } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { useLocation, useParams } from 'react-router-dom';
 
 import {
   Box,
@@ -10,26 +10,27 @@ import {
   Flex,
   Input,
   useColorModeValue,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 
-import { terroristList } from "../../assets/database";
-import { Component } from "../base/fc";
-import { CardList } from "./grid/cardList";
-import { Header } from "./header";
-import { ItemDetails } from "./itemDetails";
-import { ItemList } from "./list/itemList";
-import { TerroristType } from "../../types/";
+import { terroristList } from '../../assets/database';
+import { Component } from '../base/fc';
+import { CardList } from './grid/cardList';
+import { Header } from './header';
+import { ItemDetails } from './itemDetails';
+import { ItemList } from './list/itemList';
+import { TerroristType } from '../../types/';
 
 export const Home: Component = () => {
   const { id } = useParams();
   const location = useLocation();
 
   const [showAsList, setShowAsList] = useState(true);
-  const [query, setQuery] = useState(location.search.split("?")[1] || "");
+  const [query, setQuery] = useState(location.search.split('?')[1] || '');
   const [terroristFilteredList, setTerroristFilteredList] =
     useState<Array<TerroristType>>(terroristList);
 
-  const searchBarColor = useColorModeValue("black", "white");
+  const searchBarColor = useColorModeValue('black', 'white');
+  const bgColor = useColorModeValue('gray.200', 'black');
 
   useEffect(() => {
     setTerroristFilteredList(
@@ -51,25 +52,23 @@ export const Home: Component = () => {
     );
   }, [query]);
 
-  const bgColor = useColorModeValue("gray.200", "black");
-
   return (
-    <Box background={bgColor} height={"100%"} minH={"100vh"}>
+    <Box background={bgColor} height={'100%'} minH={'100vh'}>
       <Center>
         <Box
-          maxWidth={{ base: "990px", xl: "1440px" }}
-          flex={"1 1 100%"}
-          padding={"45px 25px"}
+          maxWidth={{ base: '990px', xl: '1440px' }}
+          flex={'1 1 100%'}
+          padding={'45px 25px'}
         >
           <AnimateSharedLayout>
             <Header />
 
-            <Flex justifyContent={"center"} marginTop={6}>
-              <ButtonGroup spacing={0} size={"lg"}>
+            <Flex justifyContent={'center'} marginTop={6}>
+              <ButtonGroup spacing={0} size={'lg'}>
                 <Button
                   borderRightRadius={0}
-                  borderWidth={"1px"}
-                  colorScheme={showAsList ? "teal" : "gray"}
+                  borderWidth={'1px'}
+                  colorScheme={showAsList ? 'teal' : 'gray'}
                   onClick={() => {
                     setShowAsList(true);
                   }}
@@ -78,8 +77,8 @@ export const Home: Component = () => {
                 </Button>
                 <Button
                   borderLeftRadius={0}
-                  borderWidth={"1px"}
-                  colorScheme={!showAsList ? "teal" : "gray"}
+                  borderWidth={'1px'}
+                  colorScheme={!showAsList ? 'teal' : 'gray'}
                   onClick={() => {
                     setShowAsList(false);
                   }}
@@ -91,12 +90,15 @@ export const Home: Component = () => {
 
             <Center>
               <Input
-                maxWidth={{ base: "80%", md: "70%", lg: "50%", xl: "40%" }}
+                maxWidth={{ base: '80%', md: '70%', lg: '50%', xl: '40%' }}
                 borderColor={searchBarColor}
                 marginTop={6}
-                type="text"
+                type='text'
                 value={query}
-                placeholder={"¿Qué podrá hacer mi personaje?"}
+                placeholder={'¿Qué podrá hacer mi personaje?'}
+                _placeholder={{
+                  textColor: searchBarColor,
+                }}
                 onChange={(e) => {
                   setQuery(e.target.value);
                 }}
