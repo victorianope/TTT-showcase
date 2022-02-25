@@ -1,21 +1,23 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { AnimatePresence, motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { isLightColor } from '../../../utils/isLightColor';
 
 import {
   Box,
   BoxProps,
   Flex,
   Heading,
+  Image,
   ListItem,
   ListItemProps,
   Text,
   useColorMode,
   useColorModeValue,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 
-import { TerroristType } from "../../../types";
-import { Component, ComponentProps } from "../../base/fc";
-import { getRoleColor } from "../../../utils/getRoleColor";
+import { TerroristType } from '../../../types';
+import { getRoleColor } from '../../../utils/getRoleColor';
+import { Component, ComponentProps } from '../../base/fc';
 
 interface ItemProps extends ComponentProps {
   terrorist: TerroristType;
@@ -27,7 +29,7 @@ export const Item: Component<ItemProps> = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const { colorMode } = useColorMode();
-  const backgroundColor = useColorModeValue("#EEE", "#444");
+  const backgroundColor = useColorModeValue('#EEE', '#444');
 
   const MotionBox = motion<BoxProps>(Box);
   const MotionLi = motion<ListItemProps>(ListItem);
@@ -35,14 +37,14 @@ export const Item: Component<ItemProps> = (props) => {
   return (
     <MotionLi
       style={{
-        listStyle: "none",
+        listStyle: 'none',
         backgroundColor: `${backgroundColor}`,
-        borderRadius: "10px",
-        padding: "20px",
-        overflow: "hidden",
-        cursor: "pointer",
-        borderWidth: "3px",
-        borderColor: `${getRoleColor(colorMode === "light", terrorist.group)}`,
+        borderRadius: '10px',
+        padding: '20px',
+        overflow: 'hidden',
+        cursor: 'pointer',
+        borderWidth: '3px',
+        borderColor: `${getRoleColor(colorMode === 'light', terrorist.group)}`,
       }}
       layout
       onClick={() => {
@@ -52,24 +54,30 @@ export const Item: Component<ItemProps> = (props) => {
     >
       <Flex>
         <MotionBox
-          maxWidth={"80px"}
-          height={"80px"}
-          borderRadius={"20px"}
+          maxWidth={'80px'}
+          height={'80px'}
+          borderRadius={'20px'}
+          bgColor={getRoleColor(colorMode === 'light', terrorist.group)}
           layout
         >
-          <img width={"80px"} src={`images/${terrorist.image}`} alt="" />
+          <Image
+            width={'80px'}
+            src={`images/${terrorist.image}`}
+            opacity={0.8}
+            alt=''
+          />
         </MotionBox>
         <Box marginLeft={8}>
           <Text
-            fontSize={"14px"}
-            textColor={getRoleColor(colorMode === "light", terrorist.group)}
-            textTransform={"uppercase"}
+            fontSize={'14px'}
+            textColor={getRoleColor(colorMode === 'light', terrorist.group)}
+            textTransform={'uppercase'}
           >
             {terrorist.group}
           </Text>
           <Heading
-            fontSize={"36px"}
-            textColor={getRoleColor(colorMode === "light", terrorist.group)}
+            fontSize={'36px'}
+            textColor={getRoleColor(colorMode === 'light', terrorist.group)}
           >
             {terrorist.name}
           </Heading>
@@ -84,15 +92,29 @@ export const Item: Component<ItemProps> = (props) => {
             exit={{ opacity: 0 }}
           >
             <Box
-              width={"100%"}
-              backgroundColor={"#BBB"}
-              borderRadius={"15px"}
-              marginTop={"12px"}
-              paddingY={"10px"}
+              width={'100%'}
+              backgroundColor={getRoleColor(
+                colorMode === 'light',
+                terrorist.group
+              )}
+              borderRadius={'15px'}
+              marginTop={'12px'}
+              paddingY={'10px'}
             >
               {terrorist.description.map((item, itemId) => {
                 return (
-                  <Text key={itemId} marginX={"18px"} paddingY={"4px"}>
+                  <Text
+                    key={itemId}
+                    marginX={'18px'}
+                    paddingY={'4px'}
+                    textColor={
+                      isLightColor(
+                        getRoleColor(colorMode === 'light', terrorist.group)
+                      )
+                        ? 'black'
+                        : 'white'
+                    }
+                  >
                     {item}
                   </Text>
                 );
