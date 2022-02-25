@@ -5,7 +5,6 @@ import {
   Heading,
   Icon,
   ListProps,
-  Text,
   UnorderedList,
   useBreakpointValue,
   useColorModeValue,
