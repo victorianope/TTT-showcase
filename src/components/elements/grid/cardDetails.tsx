@@ -13,17 +13,17 @@ import {
 	useColorModeValue,
 } from '@chakra-ui/react';
 
-import { TerroristType } from '../../types/';
-import { getRoleColor } from '../../utils/getRoleColor';
-import { isLightColor } from '../../utils/isLightColor';
-import { Component, ComponentProps } from '../base/fc';
+import { TerroristType } from '../../../types';
+import { getRoleColor } from '../../../utils/getRoleColor';
+import { isLightColor } from '../../../utils/isLightColor';
+import { Component, ComponentProps } from '../../base/fc';
 
-interface ItemDetailsProps extends ComponentProps {
+interface CardDetailsProps extends ComponentProps {
 	terrorist: TerroristType;
 	onClose: () => void;
 }
 
-export const ItemDetails: Component<ItemDetailsProps> = (props) => {
+export const CardDetails: Component<CardDetailsProps> = (props) => {
 	const { terrorist, onClose } = props;
 
 	const { colorMode } = useColorMode();
@@ -41,9 +41,9 @@ export const ItemDetails: Component<ItemDetailsProps> = (props) => {
 				minW={'700px'}
 				margin={'0 auto'}
 			>
-				<ModalHeader marginTop={2} marginX={6}>
+				<ModalHeader marginTop={4} marginX={6}>
 					<Grid templateColumns={'repeat(2, 1fr)'}>
-						<Box marginTop={2}>
+						<Box>
 							<Text
 								textColor={getRoleColor(colorMode === 'light', terrorist.group)}
 								fontSize={'14px'}

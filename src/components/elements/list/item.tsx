@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { isLightColor } from '../../../utils/isLightColor';
 
 import {
 	Box,
@@ -15,6 +14,7 @@ import {
 
 import { TerroristType } from '../../../types';
 import { getRoleColor } from '../../../utils/getRoleColor';
+import { isLightColor } from '../../../utils/isLightColor';
 import { Component, ComponentProps } from '../../base/fc';
 
 interface ItemProps extends ComponentProps {

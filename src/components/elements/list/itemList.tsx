@@ -10,9 +10,9 @@ import {
 	useColorModeValue,
 } from '@chakra-ui/react';
 
+import { TerroristType } from '../../../types/';
 import { Component, ComponentProps } from '../../base/fc';
 import { Item } from './item';
-import { TerroristType } from '../../../types/';
 
 interface ItemListProps extends ComponentProps {
 	terroristFilteredList: TerroristType[];

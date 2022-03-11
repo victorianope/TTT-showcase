@@ -1,7 +1,6 @@
 import {
 	Box,
 	Heading,
-	Image,
 	ListItem,
 	Text,
 	useColorMode,
@@ -12,7 +11,7 @@ import {
 import { TerroristType } from '../../../types';
 import { getRoleColor } from '../../../utils/getRoleColor';
 import { Component, ComponentProps } from '../../base/fc';
-import { ItemDetails } from '../itemDetails';
+import { CardDetails } from './cardDetails';
 
 interface CardProps extends ComponentProps {
 	terrorist: TerroristType;
@@ -100,7 +99,7 @@ export const Card: Component<CardProps> = (props) => {
 					</Box>
 				</Box>
 			</ListItem>
-			{isOpen && <ItemDetails terrorist={terrorist} onClose={onClose} />}
+			{isOpen && <CardDetails terrorist={terrorist} onClose={onClose} />}
 		</>
 	);
 };

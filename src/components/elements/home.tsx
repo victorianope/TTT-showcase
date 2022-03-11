@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 import {
 	Box,
@@ -16,7 +17,6 @@ import { Component } from '../base/fc';
 import { CardList } from './grid/cardList';
 import { Header } from './header';
 import { ItemList } from './list/itemList';
-import { useParams } from 'react-router-dom';
 
 export const Home: Component = () => {
 	const { searchQuery } = useParams();

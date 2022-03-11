@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 import {
 	Box,
 	Grid,
@@ -7,7 +9,6 @@ import {
 	useColorMode,
 	useColorModeValue,
 } from '@chakra-ui/react';
-import * as React from 'react';
 
 export const Header = () => {
 	const { toggleColorMode } = useColorMode();
