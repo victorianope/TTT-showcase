@@ -87,7 +87,7 @@ export const CardDetails: Component<CardDetailsProps> = (props) => {
 							terrorist.group
 						)}
 					>
-						<Box width={'100%'} marginTop={'12px'} paddingY={'10px'}>
+						<Box width={'100%'} paddingY={'10px'}>
 							{terrorist.description.map((item, itemId) => {
 								return (
 									<Text
