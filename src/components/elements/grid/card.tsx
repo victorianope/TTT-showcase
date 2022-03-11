@@ -1,6 +1,7 @@
 import {
 	Box,
 	Heading,
+	Image,
 	ListItem,
 	Text,
 	useColorMode,
@@ -9,8 +10,8 @@ import {
 } from '@chakra-ui/react';
 
 import { TerroristType } from '../../../types';
-import { Component, ComponentProps } from '../../base/fc';
 import { getRoleColor } from '../../../utils/getRoleColor';
+import { Component, ComponentProps } from '../../base/fc';
 import { ItemDetails } from '../itemDetails';
 
 interface CardProps extends ComponentProps {
@@ -48,7 +49,11 @@ export const Card: Component<CardProps> = (props) => {
 						cursor={'pointer'}
 						position={'relative'}
 						borderRadius={'20px'}
-						background={bgColor}
+						background={
+							colorMode === 'light'
+								? getRoleColor(true, terrorist.group)
+								: '#1c1c1e'
+						}
 						overflow={'hidden'}
 						width={'100%'}
 						height={'100%'}
@@ -71,14 +76,22 @@ export const Card: Component<CardProps> = (props) => {
 							maxWidth={'600px'}
 						>
 							<Text
-								textColor={getRoleColor(colorMode === 'light', terrorist.group)}
+								textColor={
+									colorMode === 'light'
+										? bgColor
+										: getRoleColor(false, terrorist.group)
+								}
 								fontSize={'14px'}
 								textTransform={'uppercase'}
 							>
 								{terrorist.group}
 							</Text>
 							<Heading
-								color={getRoleColor(colorMode === 'light', terrorist.group)}
+								color={
+									colorMode === 'light'
+										? bgColor
+										: getRoleColor(false, terrorist.group)
+								}
 								margin={'8px 0'}
 							>
 								{terrorist.name}
